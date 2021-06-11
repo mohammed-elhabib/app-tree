@@ -37,9 +37,9 @@ npm run lint
 ![alt text](https://github.com/mohammed-elhabib/app-tree/blob/main/screenshot/add-new%20child.PNG?raw=true)
 
 # Project structure
- &emsp; &emsp;## src <br />
-  &emsp; &emsp; &emsp; &emsp; ### entities <br />
-  &emsp; &emsp; &emsp; &emsp;  ### plugins <br />
- &emsp; &emsp; &emsp; &emsp; ### services <br />
-  &emsp; &emsp;&emsp; &emsp; &emsp; ### store <br />
- &emsp; &emsp; &emsp; &emsp;  ### ui <br />
+ &emsp; &emsp;## src : <br />
+  &emsp; &emsp; &emsp; &emsp;  - entities <br />
+  &emsp; &emsp; &emsp; &emsp;  - plugins <br />
+  &emsp; &emsp; &emsp; &emsp;  - services <br />
+  &emsp; &emsp;&emsp; &emsp;   - store <br />
+  &emsp; &emsp; &emsp; &emsp;  - ui <br />
