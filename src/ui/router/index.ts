@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
+import Home from '@/ui/views/Home.vue'
 import TreeView from '@/ui/views/TreeView.vue'
 
 Vue.use(VueRouter)
@@ -8,7 +9,14 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
-    component: TreeView
+    component: Home
+  },
+  {
+    path: '/tree/:id',
+    name: 'TreeView',
+    component: TreeView,
+    props:true
+    
   }
 ]
 

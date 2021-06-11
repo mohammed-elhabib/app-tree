@@ -5,13 +5,13 @@
       small
         icon
         @click="changeScale(true)" 
-        outlined><v-icon>mdi-magnify-plus-outline</v-icon></v-btn>
+        ><v-icon>mdi-magnify-plus-outline</v-icon></v-btn>
       <v-btn
         class="negativeScale"
         @click="changeScale(false)"
         small
         icon
-        outlined
+        
         ><v-icon>mdi-magnify-minus-outline</v-icon></v-btn   >
     </div>
     <div
@@ -36,16 +36,18 @@
 
 <script lang="ts">
 
-import { Component, Ref, Vue } from "vue-property-decorator";
-import treeModule from "@/store/tree";
+import { Component, Prop, Ref, Vue } from "vue-property-decorator";
+import treeModule from "@/store/treeModule";
+
 @Component({ components: {} })
 export default class TreeView extends Vue {
   @Ref() linksContainer!: SVGSVGElement;
   @Ref() containerDiv!: HTMLDivElement;
   @Ref() treeRef!: any;
+  @Prop() id!:number;
   scaleView = 1;
   drowTree = false;
-  showPrint = true;
+  showPrint = false;
   updateTree() {
     this.drowTree = false;
     this.linksContainer.innerHTML = "";
@@ -57,8 +59,14 @@ export default class TreeView extends Vue {
       });
     });
   }
+
   mounted() {
-    this.drowTree = true;
+    treeModule.getTree(this.id).then(x=>{
+        treeModule.setCuurrentTree(x); 
+             this.showPrint = true;
+             this.drowTree = true;
+             this.updateTree()
+    })
   }
   changeScale(add: boolean) {
     if (add) {
@@ -71,7 +79,7 @@ export default class TreeView extends Vue {
     return this.drowTree && this.linksContainer;
   }
   get treeItems() {
-    return treeModule.tree;
+    return treeModule.currentTree?.root;
   }
   get heigthContainer() {
     return this.drowTree ? this.treeRef?.heigth : 0;
