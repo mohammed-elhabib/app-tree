@@ -22,24 +22,24 @@ npm run lint
 ## screenShot 
 ## Home Page
 
-![alt text](https://raw.githubusercontent.com/mohammed-elhabib/app-tree/main/screenshot/Home.PNG?token=ALM4XNOSLVDT6DTRV27UGNDAYOPDK)
+![alt text](https://github.com/mohammed-elhabib/app-tree/blob/main/screenshot/Home.PNG?raw=true)
 
 ## add new Tree dailog
 
-![alt text](https://raw.githubusercontent.com/mohammed-elhabib/app-tree/main/screenshot/add-new-tree.PNG?token=ALM4XNPDGE3GHF7SK6PIA4TAYOPLS)
+![alt text](https://github.com/mohammed-elhabib/app-tree/blob/main/screenshot/add-new-tree.PNG?raw=true)
 
 ## Tree Page
 
-![alt text](https://raw.githubusercontent.com/mohammed-elhabib/app-tree/main/screenshot/tree.PNG?token=ALM4XNNAP4GDP4I2EG6NEJTAYOPN2)
+![alt text](https://github.com/mohammed-elhabib/app-tree/blob/main/screenshot/tree.PNG?raw=true)
 
 ## add new Node dailog
 
-![alt text](https://raw.githubusercontent.com/mohammed-elhabib/app-tree/main/screenshot/add-new%20child.PNG?token=ALM4XNJB6CUXJIQ4TG4A7Z3AYOPQM)
+![alt text](https://github.com/mohammed-elhabib/app-tree/blob/main/screenshot/add-new%20child.PNG?raw=true)
 
 # Project structure
- -- ## src
- ---  ### entities
- ---  ### plugins
- ---  ### services 
- ---  ### store
- ---  ### ui
+ &emsp; &emsp;## src
+  &emsp; &emsp; &emsp; &emsp; ### entities
+  &emsp; &emsp; &emsp; &emsp;  ### plugins
+ &emsp; &emsp; &emsp; &emsp; ### services 
+  &emsp; &emsp;&emsp; &emsp; &emsp; ### store
+ &emsp; &emsp; &emsp; &emsp;  ### ui
